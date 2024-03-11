@@ -19,7 +19,7 @@ const Header = () => {
                     </div>
                     <div className={style.box_main_content__divs_content}>
                         <div className={style.divs_content__contacts_box}>
-                            <div>{"8 (495) 111-11-11"}</div>
+                            <h2>{"8 (495) 111-11-11"}</h2>
                             <div> м. Борисово</div>
                             <div>Борисовские пруды 22 к4, с1</div>
                         </div>
