@@ -19,17 +19,21 @@
             display: grid;
             place-items: center;
 
+            @mixin DivsContent($width, $direction, $JusCont) {
+                width: $width;
+                display: flex;
+                flex-direction: $direction;
+                border-left: none;
+                align-items: center;
+                justify-content: $JusCont;
+            }
+
             &:nth-child(1) {
                 width: 208px;
             }
 
             &:nth-child(2) {
-                width: 230px;
-                display: flex;
-                flex-direction: row;
-                border-left: none;
-                align-items: center;
-                justify-content: center;
+                @include DivsContent(230px, row, center);
 
                 div:nth-child(1) {
                     font-size: 24px;
@@ -57,7 +61,7 @@
                     flex-direction: row;
                     flex-wrap: wrap;
 
-                    h2:nth-child(1) {
+                    div:nth-child(1) {
                         width: 100%;
                         font-size: 24px;
                         font-weight: 700;
@@ -65,37 +69,32 @@
                         text-align: right;
                     }
 
-                    div:nth-child(2) {
-                        width: 95px;
+                    @mixin AddressBoxes($width) {
+                        width: $width;
                         font-size: 14px;
                         font-weight: 400;
                         line-height: 17px;
                         opacity: 0.8;
                     }
 
+                    div:nth-child(2) {
+                        @include AddressBoxes(95px);
+                    }
+
                     div:nth-child(3) {
-                        width: 175px;
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 17px;
-                        opacity: 0.8;
+                        @include AddressBoxes(175px);
                     }
                 }
             }
 
             &:nth-child(4) {
-                width: 134px;
-                border-left: none;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
+                @include DivsContent(134px, column, center);
 
-                div{
+                div {
                     position: relative;
                 }
 
-                div:after{
+                div:after {
                     content: "";
                     position: absolute;
                     top: -5px;
@@ -118,12 +117,7 @@
             }
 
             &:nth-child(5) {
-                width: 123px;
-                border-left: none;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
+                @include DivsContent(123px, column, center);
 
                 p {
                     font-size: 14px;
@@ -134,11 +128,9 @@
             }
 
             &:nth-child(6) {
-                width: calc(100% - 3px);
+                @include DivsContent(calc(100% - 3px), row, start);
                 height: 57px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+                border-left: 0.1vw solid rgba(255, 255, 255, 0.261);
                 border-top: none;
 
                 div {
@@ -149,7 +141,145 @@
                     opacity: 0.8;
                 }
             }
+
+            &:nth-child(7) {
+                display: none;
+                place-items: center;
+
+                div {
+                    img {
+                        margin-left: 5px;
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
         }
     }
+}
 
+@media (width < 1200px) {
+    .header {
+
+        .header__box_main_content {
+            width: 800px;
+            border: 1px solid red;
+
+            .box_main_content__divs_content {
+
+                &:nth-child(1) {
+                    width: 170px;
+                }
+
+                &:nth-child(2) {
+                    width: 150px;
+                }
+
+                &:nth-child(3) {
+                    width: 200px;
+
+                    .divs_content__contacts_box {
+                        width: 100% !important;
+                        height: 100% !important;
+                        position: relative;
+
+                        div {
+                            width: 100% !important;
+                            display: grid;
+                            place-items: center;
+                        }
+                    }
+                }
+
+                &:nth-child(4) {
+                    width: 139px;
+                }
+
+                &:nth-child(5) {
+                    width: 139px;
+                }
+
+                &:nth-child(6) {
+                    width: 800px;
+                }
+            }
+        }
+    }
+}
+
+@media (width < 800px) {
+    .header {
+        height: 77px;
+
+        .header__box_main_content {
+            width: 390px;
+            border: 1px solid red;
+
+            .box_main_content__divs_content {
+                border: none !important;
+                height: 100%;
+
+                &:nth-child(1) {
+                    width: 150px;
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+
+                &:nth-child(3) {
+                    width: 125px;
+
+                    .divs_content__contacts_box {
+                        display: grid;
+                        place-items: center;
+                        width: auto;
+                        height: auto;
+
+                        div:nth-child(1) {
+                            display: grid;
+                            place-items: center;
+                            font-size: 16px;
+                        }
+
+                        div:nth-child(2) {
+                            display: none;
+                        }
+
+                        div:nth-child(3) {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:nth-child(6) {
+                    display: none;
+                }
+
+                &:nth-child(7) {
+                    display: grid;
+                }
+
+                &:nth-child(5) {
+                    justify-content: center;
+                    align-items: center;
+                    width: 35px;
+
+                    p {
+                        display: none;
+                    }
+                }
+
+                &:nth-child(4) {
+                    justify-content: center;
+                    align-items: center;
+                    width: 35px;
+
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }

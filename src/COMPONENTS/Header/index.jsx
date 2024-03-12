@@ -2,6 +2,7 @@ import style from "./styles.module.scss";
 import Logo from '../../IMAGE/logo.png';
 import IconProfile from '../../IMAGE/IconProfile.png';
 import IconBasket from '../../IMAGE/IconBasket.png';
+import IconBurgerMenu from '../../IMAGE/IconBurgerMenu.png';
 
 
 
@@ -19,7 +20,7 @@ const Header = () => {
                     </div>
                     <div className={style.box_main_content__divs_content}>
                         <div className={style.divs_content__contacts_box}>
-                            <h2>{"8 (495) 111-11-11"}</h2>
+                            <div>{"8 (495) 111-11-11"}</div>
                             <div> м. Борисово</div>
                             <div>Борисовские пруды 22 к4, с1</div>
                         </div>
@@ -37,6 +38,11 @@ const Header = () => {
                         <div>Скоро открытие</div>
                         <div>Вопрос-ответ</div>
                         <div>О нас</div>
+                    </div>
+                    <div className={style.box_main_content__divs_content}>
+                        <div>
+                            <img src={IconBurgerMenu} alt="Icon burger menu links" />
+                        </div>
                     </div>
                 </div>
             </header>
