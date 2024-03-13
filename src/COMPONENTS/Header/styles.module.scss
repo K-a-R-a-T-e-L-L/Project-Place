@@ -163,7 +163,6 @@
 
         .header__box_main_content {
             width: 800px;
-            border: 1px solid red;
 
             .box_main_content__divs_content {
 
@@ -210,10 +209,10 @@
 @media (width < 800px) {
     .header {
         height: 77px;
+        justify-content: center;
 
         .header__box_main_content {
             width: 390px;
-            border: 1px solid red;
 
             .box_main_content__divs_content {
                 border: none !important;
