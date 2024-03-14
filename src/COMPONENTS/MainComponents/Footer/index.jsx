@@ -1,8 +1,8 @@
 import style from './styles.module.scss';
-import WkLogo from '../../IMAGE/WkLogo.png';
-import YouTubeLogo from '../../IMAGE/YouTubeLogo.png';
-import TgLogo from '../../IMAGE/TgLogo.png';
-import IconGeolocation from '../../IMAGE/IconGeolocation.png';
+import WkLogo from '../../../IMAGE/WkLogo.png';
+import YouTubeLogo from '../../../IMAGE/YouTubeLogo.png';
+import TgLogo from '../../../IMAGE/TgLogo.png';
+import IconGeolocation from '../../../IMAGE/IconGeolocation.png';
 
 const Footer = () => {
     return (

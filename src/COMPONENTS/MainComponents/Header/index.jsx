@@ -1,8 +1,8 @@
 import style from "./styles.module.scss";
-import Logo from '../../IMAGE/logo.png';
-import IconProfile from '../../IMAGE/IconProfile.png';
-import IconBasket from '../../IMAGE/IconBasket.png';
-import IconBurgerMenu from '../../IMAGE/IconBurgerMenu.png';
+import Logo from '../../../IMAGE/logo.png';
+import IconProfile from '../../../IMAGE/IconProfile.png';
+import IconBasket from '../../../IMAGE/IconBasket.png';
+import IconBurgerMenu from '../../../IMAGE/IconBurgerMenu.png';
 
 
 
