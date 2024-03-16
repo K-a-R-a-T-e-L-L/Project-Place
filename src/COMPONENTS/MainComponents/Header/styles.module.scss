@@ -18,6 +18,15 @@
             height: 93.5px;
             display: grid;
             place-items: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(0, 63, 66);
+            }
+
+            &:active {
+                background-color: rgb(0, 44, 46);
+            }
 
             @mixin DivsContent($width, $direction, $JusCont) {
                 width: $width;
@@ -34,6 +43,12 @@
 
             &:nth-child(2) {
                 @include DivsContent(230px, row, center);
+
+                &:hover {
+                    div:nth-child(2) {
+                        opacity: 1;
+                    }
+                }
 
                 div:nth-child(1) {
                     font-size: 24px;
@@ -53,6 +68,18 @@
             &:nth-child(3) {
                 width: 516px;
                 border-left: none;
+
+                &:hover {
+                    div {
+                        div:nth-child(2) {
+                            opacity: 1;
+                        }
+
+                        div:nth-child(3) {
+                            opacity: 1;
+                        }
+                    }
+                }
 
                 .divs_content__contacts_box {
                     width: 270px;
@@ -90,6 +117,12 @@
             &:nth-child(4) {
                 @include DivsContent(134px, column, center);
 
+                &:hover {
+                    p {
+                        opacity: 1;
+                    }
+                }
+
                 div {
                     position: relative;
                 }
@@ -118,6 +151,13 @@
 
             &:nth-child(5) {
                 @include DivsContent(123px, column, center);
+                row-gap: 10px;
+
+                &:hover {
+                    p {
+                        opacity: 1;
+                    }
+                }
 
                 p {
                     font-size: 14px;
@@ -132,6 +172,15 @@
                 height: 57px;
                 border-left: 0.1vw solid rgba(255, 255, 255, 0.261);
                 border-top: none;
+                cursor: auto;
+
+                &:hover {
+                    background-color: rgb(0, 53, 55);
+                }
+
+                &:active {
+                    background-color: rgb(0, 53, 55);
+                }
 
                 div {
                     margin-left: 40px;
@@ -139,6 +188,15 @@
                     font-weight: 400;
                     line-height: 17px;
                     opacity: 0.8;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &:active {
+                        color: turquoise;
+                    }
                 }
             }
 
@@ -146,9 +204,24 @@
                 display: none;
                 place-items: center;
 
+                &:hover {
+                    background-color: rgb(0, 53, 55);
+                }
+
                 div {
+                    display: grid;
+                    place-items: center;
+                    border-radius: 10%;
+
+                    &:hover {
+                        background-color: rgb(0, 63, 66);
+                    }
+
+                    &:active {
+                        background-color: rgb(0, 44, 46);
+                    }
+
                     img {
-                        margin-left: 5px;
                         width: 30px;
                         height: 30px;
                     }
@@ -199,7 +272,7 @@
                 }
 
                 &:nth-child(6) {
-                    width: 800px;
+                    width: calc(100% - 2px);
                 }
             }
         }
@@ -251,12 +324,30 @@
                     }
                 }
 
-                &:nth-child(6) {
-                    display: none;
-                }
+                &:nth-child(4) {
+                    justify-content: center;
+                    align-items: center;
+                    width: 35px;
 
-                &:nth-child(7) {
-                    display: grid;
+                    &:hover {
+                        background-color: rgb(0, 53, 55);
+                    }
+
+                    div {
+                        border-radius: 10%;
+                    }
+
+                    div:hover {
+                        background-color: rgb(0, 63, 66);
+                    }
+
+                    div:active {
+                        background-color: rgb(0, 44, 46);
+                    }
+
+                    p {
+                        display: none;
+                    }
                 }
 
                 &:nth-child(5) {
@@ -264,19 +355,33 @@
                     align-items: center;
                     width: 35px;
 
+                    &:hover {
+                        background-color: rgb(0, 53, 55);
+                    }
+
+                    img {
+                        border-radius: 10%;
+                    }
+
+                    img:hover {
+                        background-color: rgb(0, 63, 66);
+                    }
+
+                    img:active {
+                        background-color: rgb(0, 44, 46);
+                    }
+
                     p {
                         display: none;
                     }
                 }
 
-                &:nth-child(4) {
-                    justify-content: center;
-                    align-items: center;
-                    width: 35px;
+                &:nth-child(6) {
+                    display: none;
+                }
 
-                    p {
-                        display: none;
-                    }
+                &:nth-child(7) {
+                    display: grid;
                 }
             }
         }

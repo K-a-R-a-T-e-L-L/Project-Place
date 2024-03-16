@@ -16,7 +16,32 @@
             font-size: 14px;
             font-weight: 400;
             line-height: 17px;
-            letter-spacing: 0%;
+            &:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
+            &:active{
+                color: blue;
+            }
+        }
+    }
+}
+
+
+@media (width < 1200px) {
+    .nav{
+        width: 800px;
+    }
+}
+
+@media (width < 800px) {
+    .nav{
+        width: 390px;
+        padding-left: 20px;
+        ul{
+            li{
+                font-size: 12px;
+            }
         }
     }
 }

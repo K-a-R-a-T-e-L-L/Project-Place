@@ -13,14 +13,26 @@
         font-size: 24px;
         font-weight: 700;
         line-height: 29px;
-        letter-spacing: 0%;
+        border: 0.1vw solid black;
+        &:hover{
+            background-color: rgb(0, 53, 59);
+        }
+        &:active{
+            background-color: rgba(0, 43, 47, 0.795);
+        }
     }
 
     .box_buttons__registration_button {
         font-size: 22px;
         font-weight: 700;
         line-height: 27px;
-        letter-spacing: 0%;
-        background-color: rgba(240, 248, 255, 0);
+        border: 0.1vw solid rgb(0, 77, 86);
+        &:hover{
+            background-color: rgba(0, 77, 86, 0.1);
+            border: 0.1vw solid black;
+        }
+        &:active{
+            background-color: rgba(0, 47, 52, 0.16);
+        }
     }
 }

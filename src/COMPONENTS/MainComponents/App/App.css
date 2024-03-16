@@ -29,6 +29,10 @@ body{
   background-color: rgba(0, 8, 39, 0.405);
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 .App{
   background-color: rgba(68, 0, 113, 0.237);
   width: 1920px;
