@@ -32,8 +32,10 @@ const Footer = () => {
                         <p>Мы в соцсетях</p>
                     </div>
                     <div className={style.box_main_content__divs_content}>
-                        <img src={IconGeolocation} alt="Icon geolocation" />
-                        <p>Борисовские пруды 22 к4, с1</p>
+                        <div>
+                            <img src={IconGeolocation} alt="Icon geolocation" />
+                            <p>Борисовские пруды 22 к4, с1</p>
+                        </div>
                     </div>
                     <div className={style.box_main_content__divs_content}>
                         <h2>ООО «Место»</h2>

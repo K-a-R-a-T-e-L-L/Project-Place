@@ -45,6 +45,14 @@
                     line-height: 20px;
                     background-color: rgba(0, 255, 255, 0);
                     color: white;
+
+                    &:hover {
+                        background-color: rgba(0, 255, 255, 0.071);
+                    }
+
+                    &:active {
+                        opacity: 0.8;
+                    }
                 }
             }
 
@@ -55,6 +63,16 @@
                     font-size: 16px;
                     font-weight: 700;
                     line-height: 20px;
+
+                    &:hover {
+                        opacity: 0.8;
+                        cursor: pointer;
+                    }
+
+                    &:active {
+                        color: aquamarine;
+                        opacity: 1;
+                    }
                 }
 
                 p:nth-child(2) {
@@ -62,6 +80,15 @@
                     font-size: 12px;
                     font-weight: 400;
                     line-height: 15px;
+                    &:hover {
+                        opacity: 0.8;
+                        cursor: pointer;
+                    }
+
+                    &:active {
+                        color: aquamarine;
+                        opacity: 1;
+                    }
                 }
 
                 div:nth-child(3) {
@@ -69,6 +96,16 @@
                     flex-direction: row;
                     column-gap: 10px;
                     display: none;
+                    
+                    img:hover {
+                        border-radius: 10%;
+                        background-color: rgba(240, 248, 255, 0.142);
+                        cursor: pointer;
+                    }
+
+                    img:active {
+                        background-color: rgba(0, 0, 0, 0.142);
+                    }
                 }
 
                 p:nth-child(4) {
@@ -77,6 +114,15 @@
                     line-height: 15px;
                     opacity: 0.8;
                     display: none;
+                    &:hover {
+                        opacity: 0.8;
+                        cursor: pointer;
+                    }
+
+                    &:active {
+                        color: aquamarine;
+                        opacity: 1;
+                    }
                 }
             }
 
@@ -87,6 +133,16 @@
                     display: flex;
                     flex-direction: row;
                     column-gap: 10px;
+                    
+                    img:hover {
+                        border-radius: 10%;
+                        background-color: rgba(240, 248, 255, 0.142);
+                        cursor: pointer;
+                    }
+
+                    img:active {
+                        background-color: rgba(0, 0, 0, 0.142);
+                    }
                 }
 
                 p {
@@ -100,10 +156,49 @@
             &:nth-child(4) {
                 @include DivsContent(336px, none, row, center, column-gap, 12px);
 
-                p {
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 20px;
+                div {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 10px;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 20px;
+                        cursor: pointer;
+                    }
+                }
+
+                div:hover {
+                    cursor: pointer;
+
+                    p {
+                        opacity: 0.8;
+                    }
+
+                    img {
+                        opacity: 0.8;
+                    }
+                }
+
+                div:active {
+                    p {
+                        opacity: 1;
+                        color: aquamarine;
+                    }
+
+                    img {
+                        opacity: 1;
+                    }
                 }
             }
 
@@ -258,32 +353,35 @@
                     width: 195px;
                     border-left: 0.1vw solid rgba(255, 255, 255, 0.261);
                     height: 100px;
-                    border-top: 0 ;
+                    border-top: 0;
                     border-left: 0;
                 }
 
                 &:nth-child(5) {
                     width: 195px;
                     height: 100px;
-                    border-top: 0 ;
+                    border-top: 0;
                     border-right: 0;
                     padding-left: 20px;
-                    h2{
+
+                    h2 {
                         text-align: left;
                     }
-                    p{
+
+                    p {
                         text-align: left;
                     }
                 }
-                &:nth-child(6){
+
+                &:nth-child(6) {
                     width: 100%;
                     height: 250px;
                     padding-left: 20px;
                     margin-bottom: 18px;
                     border-left: 0;
                     border-right: 0;
-                    
-                    p{
+
+                    p {
                         width: 85%;
                         text-align: justify;
                     }
