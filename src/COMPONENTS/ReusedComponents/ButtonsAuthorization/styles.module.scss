@@ -36,3 +36,14 @@
         }
     }
 }
+
+
+@media (width < 800px) {
+    .box_buttons{
+        height: 60px;
+        background-color: rgba(240, 248, 255, 0);
+        button{
+            font-size: 14px !important;
+        }
+    }
+}

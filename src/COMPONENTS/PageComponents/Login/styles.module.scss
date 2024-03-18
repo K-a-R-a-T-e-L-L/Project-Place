@@ -35,6 +35,15 @@
             font-weight: 600;
             line-height: 20px;
             text-decoration-line: underline;
+
+            &:hover{
+                color: orangered;
+                cursor: pointer;
+            }
+
+            &:active{
+                transform: translateY(-0.05vw);
+            }
         }
 
         span:last-child {
@@ -58,13 +67,6 @@
 @media (width < 800px) {
     .section{
         width: 390px;
-        div{
-            height: 60px;
-            background-color: rgba(240, 248, 255, 0);
-            button{
-                font-size: 14px !important;
-            }
-        }
         .section__form_authorization{
             margin-top: 10px;
             h2{
