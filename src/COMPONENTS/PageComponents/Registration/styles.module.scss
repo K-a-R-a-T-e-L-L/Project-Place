@@ -20,14 +20,6 @@
             line-height: 120%;
         }
 
-        label {
-            width: 600px;
-            display: flex;
-            justify-content: left;
-            column-gap: 15px;
-            margin-top: 20px;
-        }
-
         span {
             color: darkorange;
             font-size: 16px;
@@ -75,10 +67,6 @@
 
             p {
                 width: 310px !important;
-            }
-
-            label {
-                width: 310px;
             }
 
             .registration_form__code_receiving {

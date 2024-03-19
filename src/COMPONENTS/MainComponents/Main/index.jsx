@@ -10,8 +10,8 @@ const Main = () => {
             <main className={style.main}>
                 <NavigationPath></NavigationPath>
                 <Routes>
-                    {/* <Route exact path='/' Component={Login} /> */}
-                    <Route  exact path='/' Component={Registration} />
+                    <Route path='/' Component={Login} />
+                    <Route  path='/registration' Component={Registration} />
                 </Routes>
             </main>
         </>

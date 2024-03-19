@@ -2,9 +2,25 @@ import ButtonsAuthorization from '../../ReusedComponents/ButtonsAuthorization';
 import Input from '../../ReusedComponents/Input';
 import OrangeButton from '../../ReusedComponents/OrangeButton';
 import style from './styles.module.scss';
-
+import Checkbox from '../../ReusedComponents/Checkbox';
+import { useState } from 'react';
 
 const Registration = () => {
+
+    const [Checked, SetChecked] = useState(false);
+
+    const StylesConfidentialityCheckbox = {
+        width: '600px',
+        display: 'flex',
+        justifyContent: 'left',
+        columnGap: '15px',
+        marginTop: '20px',
+    };
+
+    const StylesConfidentialityCheckboxAdaptive = {
+        width: '310px',
+    };
+
     return (
         <>
             <section className={style.section}>
@@ -22,10 +38,15 @@ const Registration = () => {
                     <Input type="email" placeholder="Электронная почта" width="600px" height="60px" />
                     <Input type="password" placeholder="Пароль" width="600px" height="60px" />
                     <Input type="password" placeholder="Подтвердите пароль" width="600px" height="60px" />
-                    <label htmlFor="confidentiality-checkbox">
-                        <input type="checkbox" />
-                        <p>Ознакомлен с <span>политикой конфиденциальности</span></p>
-                    </label>
+                    <Checkbox
+                        TextP="Ознакомлен с "
+                        TextSpan='политикой конфиденциальности'
+                        Styles={StylesConfidentialityCheckbox}
+                        StylesAdaptive={StylesConfidentialityCheckboxAdaptive}
+                        Binding="confidentiality-checkboxx"
+                        Checked={Checked}
+                        SetChecked={SetChecked}
+                    />
                     <OrangeButton width="600px" height="60px" text="Зарегестрироваться" />
                     <p>Уже зарегистрированы? <span>Войти в аккаунт</span></p>
                 </form>

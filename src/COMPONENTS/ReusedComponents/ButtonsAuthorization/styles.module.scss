@@ -7,42 +7,56 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
 
-    .box_buttons__login_button {
-        background: rgb(0, 77, 86);
-        color: white;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 29px;
-        border: 0.1vw solid black;
-        &:hover{
-            background-color: rgb(0, 53, 59);
-        }
-        &:active{
-            background-color: rgba(0, 43, 47, 0.795);
-        }
-    }
+    .Link {
+        appearance: none;
+        text-decoration: none;
 
-    .box_buttons__registration_button {
-        font-size: 22px;
-        font-weight: 700;
-        line-height: 27px;
-        border: 0.1vw solid rgb(0, 77, 86);
-        &:hover{
-            background-color: rgba(0, 77, 86, 0.1);
+        .box_buttons__login_button {
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 77, 86);
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
             border: 0.1vw solid black;
+
+            &:hover {
+                background-color: rgb(0, 53, 59);
+            }
+
+            &:active {
+                background-color: rgba(0, 43, 47, 0.795);
+            }
         }
-        &:active{
-            background-color: rgba(0, 47, 52, 0.16);
+
+        .box_buttons__registration_button {
+            width: 100%;
+            height: 100%;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 27px;
+            border: 0.1vw solid rgb(0, 77, 86);
+
+            &:hover {
+                background-color: rgba(0, 77, 86, 0.1);
+                border: 0.1vw solid black;
+            }
+
+            &:active {
+                background-color: rgba(0, 47, 52, 0.16);
+            }
         }
     }
 }
 
 
 @media (width < 800px) {
-    .box_buttons{
+    .box_buttons {
         height: 60px;
         background-color: rgba(240, 248, 255, 0);
-        button{
+
+        button {
             font-size: 14px !important;
         }
     }

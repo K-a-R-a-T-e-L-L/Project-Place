@@ -1,0 +1,35 @@
+.input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid magenta;
+    border-radius: 20%;
+    background-color: black;
+    &:hover{
+        border: 2px solid magenta;
+        cursor: pointer;
+    }
+
+    &:active{
+        transform: scale(0.98);
+    }
+}
+
+.inputChecked{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid aqua;
+    border-radius: 20%;
+    background: url(../../../IMAGE/mark.png) center center;
+    background-size: cover;
+
+    &:hover{
+        border: 2px solid aqua;
+        cursor: pointer;
+    }
+
+    &:active{
+        transform: scale(0.98);
+    }
+}
