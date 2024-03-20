@@ -10,7 +10,7 @@ const Main = () => {
             <main className={style.main}>
                 <NavigationPath></NavigationPath>
                 <Routes>
-                    <Route path='/' Component={Login} />
+                    <Route path='/login' Component={Login} />
                     <Route  path='/registration' Component={Registration} />
                 </Routes>
             </main>

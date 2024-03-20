@@ -3,14 +3,16 @@
     padding-left: 40px;
     height: 60px;
 
-    ul {
+    .nav__ul {
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
 
-        li {
+        .ul__li {
+            color: black;
+            text-decoration: none;
             opacity: 0.8;
             list-style-type: none;
             font-size: 14px;
