@@ -21,7 +21,6 @@ const ButtonsAuthorization = () => {
             <div className={style.box_buttons}>
                 <Link
                     className={style.Link}
-                    exact={true}
                     to="/login"
                 >
                     <button className={style.box_buttons__login_button} style={CheckPath('/login') ? StylesActiveButton : null}>

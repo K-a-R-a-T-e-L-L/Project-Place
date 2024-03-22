@@ -1,0 +1,120 @@
+.section__registration_form {
+    height: 650px;
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+    border: 1px solid rgb(191, 192, 195);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+
+    h2 {
+        margin-bottom: 15px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    span {
+        color: darkorange;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        text-decoration-line: underline;
+
+        .registration_form__link {
+            color: darkorange;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            text-decoration-line: underline;
+
+            &:hover {
+                color: orangered;
+                cursor: pointer;
+            }
+
+            &:active {
+                opacity: 0.6;
+            }
+        }
+
+        &:hover {
+            color: orangered;
+            cursor: pointer;
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
+    }
+
+    button:nth-child(8) {
+        margin-top: 20px;
+    }
+
+    p:nth-child(9) {
+        width: 600px;
+        margin-top: 20px;
+        text-align: left;
+    }
+}
+
+@media (width < 800px) {
+    .section__registration_form {
+
+        margin-top: 10px;
+        height: 90%;
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 0px;
+        }
+
+        p {
+            width: 310px !important;
+        }
+
+        .registration_form__code_receiving {
+            width: 310px;
+
+            input {
+                width: 310px !important;
+            }
+
+            button {
+                width: 310px !important;
+                margin-top: 10px;
+            }
+        }
+
+        .registration_form__code_confirmation {
+            input {
+                width: 200px !important;
+            }
+
+            button {
+                width: 110px !important;
+            }
+        }
+
+        input:nth-child(4) {
+            width: 310px !important;
+        }
+
+        input:nth-child(5) {
+            width: 310px !important;
+        }
+
+        input:nth-child(6) {
+            width: 310px !important;
+        }
+
+        button:nth-child(8) {
+            width: 310px !important;
+        }
+
+    }
+}

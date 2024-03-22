@@ -8,11 +8,12 @@ const Input = (props) => {
         type,
         width,
         height,
+        autoComplete
     } = props
 
     return (
         <>
-            <input className={style.input} type={type} placeholder={placeholder} style={{width: width, height: height,}}/>
+            <input className={style.input} type={type} placeholder={placeholder} style={{width: width, height: height,}} autoComplete={autoComplete} />
         </>
     )
 }
