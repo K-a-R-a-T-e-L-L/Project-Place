@@ -9,21 +9,11 @@ import { useState } from 'react';
 
 const FormRegistration = (props) => {
 
-    const {ArraySizes} = props;
+    const {ArraySizes, StylesCheckbox, StylesAdaptiveCheckbox, WidthP} = props;
 
     const [Checked, SetChecked] = useState(false);
 
-    const StylesConfidentialityCheckbox = {
-        width: '600px',
-        display: 'flex',
-        justifyContent: 'left',
-        columnGap: '15px',
-        marginTop: '20px',
-    };
 
-    const StylesConfidentialityCheckboxAdaptive = {
-        width: '310px',
-    };
 
     return (
         <>
@@ -43,14 +33,14 @@ const FormRegistration = (props) => {
                 <Checkbox
                     TextP="Ознакомлен с "
                     TextSpan='политикой конфиденциальности'
-                    Styles={StylesConfidentialityCheckbox}
-                    StylesAdaptive={StylesConfidentialityCheckboxAdaptive}
-                    Binding="confidentiality-checkboxx"
+                    Styles={StylesCheckbox}
+                    StylesAdaptive={StylesAdaptiveCheckbox}
+                    Binding="confidentiality-checkbox"
                     Checked={Checked}
                     SetChecked={SetChecked}
                 />
                 <OrangeButton width={ArraySizes[0][7]} height={ArraySizes[1][7]} text="Зарегестрироваться" />
-                <p>Уже зарегистрированы? <span><Link className={style.registration_form__link} to="/login">Войти в аккаунт</Link></span></p>
+                <p style={{width: ArraySizes[0][7]}}>Уже зарегистрированы? <span><Link className={style.registration_form__link} to="/login">Войти в аккаунт</Link></span></p>
             </form>
         </>
     )

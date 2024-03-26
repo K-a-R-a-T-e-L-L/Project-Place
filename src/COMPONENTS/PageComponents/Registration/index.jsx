@@ -10,11 +10,23 @@ const Registration = () => {
         ['60px', '60px', '60px', '60px', '60px', '60px', '60px', '60px'],
     ];
 
+    const StylesCheckbox = {
+        width: '600px',
+        display: 'flex',
+        justifyContent: 'left',
+        columnGap: '15px',
+        marginTop: '20px',
+    };
+
+    const StylesAdaptiveCheckbox = {
+        width: '310px',
+    };
+
     return (
         <>
             <section className={style.section}>
-                <ButtonsAuthorization />
-                <FormRegistration ArraySizes={ArraySizes} />
+                <ButtonsAuthorization state={true}/>
+                <FormRegistration ArraySizes={ArraySizes} StylesCheckbox={StylesCheckbox} StylesAdaptiveCheckbox={StylesAdaptiveCheckbox}/>
             </section>
         </>
     )

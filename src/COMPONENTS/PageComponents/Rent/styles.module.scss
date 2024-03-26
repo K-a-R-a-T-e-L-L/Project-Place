@@ -60,6 +60,7 @@
         margin-top: 50px;
         margin-bottom: 100px;
         grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
         grid-template-rows: 230px 1fr;
 
         .info_box__info {
@@ -88,18 +89,13 @@
         }
 
         .info_box__authorization {
-            border: 2px solid rgba(0, 0, 0, 0.23);
             display: grid;
             align-items: start;
+            grid-template-rows: 15% 85%;
 
             form {
                 margin-top: 0 !important;
             }
-        }
-
-        .info_box__box_card_product {
-            grid-row: span 2;
-            border: 1px solid black;
         }
     }
 }

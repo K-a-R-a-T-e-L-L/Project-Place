@@ -16,7 +16,7 @@ const Authorization = () => {
     return (
         <>
             <section className={style.section}>
-                <ButtonsAuthorization />
+                <ButtonsAuthorization state={true}/>
                 <FormLogin ArraySizes={ArraySizes}/>
             </section>
         </>

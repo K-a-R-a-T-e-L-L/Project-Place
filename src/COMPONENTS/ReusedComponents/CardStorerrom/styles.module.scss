@@ -1,0 +1,82 @@
+.box_card_product {
+    grid-row: span 2;
+
+    .box_card_product__card_product {
+        width: 100%;
+        height: 90%;
+        border: 1px solid rgba(0, 0, 0, 0.307);
+        display: grid;
+        grid-template-rows: 45% 55%;
+        justify-content: center;
+
+        .card_product__info_storeroom {
+            width: 100%;
+            padding: 30px;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 30% 70%;
+            place-items: center;
+
+            .info_storeroom__one_box {
+                width: 100%;
+                height: 100%;
+                display: grid;
+
+                h3 {
+                    font-size: 36px;
+                    font-weight: 600;
+                    line-height: 44px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    span {
+                        color: orange;
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 24px;
+                    }
+                }
+
+                h4 {
+                    width: 290px;
+                    height: 40px;
+                    border-radius: 3vw;
+                    display: grid;
+                    place-items: center;
+                    background-color: rgba(217, 217, 217, 0.63);
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+            }
+
+            .info_storeroom__two_box {
+                width: 100%;
+                height: 100%;
+
+                .two_box__characteristic {
+                    width: 100%;
+                    height: 50px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.307);
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 15px;
+                    align-items: end;
+
+                    p:nth-child(1) {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 120%;
+                        opacity: 0.5;
+                    }
+
+                    p:nth-child(2) {
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 120%;
+                    }
+                }
+            }
+        }
+    }
+}

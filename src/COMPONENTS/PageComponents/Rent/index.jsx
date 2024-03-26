@@ -3,14 +3,58 @@ import IconStep from '../../../IMAGE/IconStep.png';
 import IconCurrentStep from '../../../IMAGE/IconCurrentStep.png';
 import FormRegistration from '../../ReusedComponents/FormRegistration';
 import ButtonsAuthorization from '../../ReusedComponents/ButtonsAuthorization';
+import CardStoreroom from '../../ReusedComponents/CardStorerrom';
+import FormLogin from '../../ReusedComponents/FormLogin';
+import { useState } from 'react';
 
 
 const Rent = () => {
 
-    const ArraySizes = [
-        ['340px', '240px', '340px', '240px', '580px', '580px', '580px', '580px'],
+    const [Choice, setChoice] = useState(false);
+
+    const ArraySizesRegistration = [
+        ['310px', '210px', '310px', '210px', '520px', '520px', '520px', '520px', '520px'],
         ['60px', '60px', '60px', '60px', '60px', '60px', '60px', '60px'],
     ];
+
+    const ArraySizesLogin = [
+        ['520px', '520px', '520px'],
+        ['60px', '60px', '60px']
+    ];
+
+    const StylesCheckbox = {
+        width: '520px',
+        display: 'flex',
+        justifyContent: 'left',
+        columnGap: '15px',
+        marginTop: '20px',
+    };
+
+    const StylesAdaptiveCheckbox = {
+        width: '310px',
+    };
+
+    const returnStateActive = (active) => {
+        if(active.registration){
+            setChoice(true)
+        }
+        else{
+            setChoice(false)
+        }
+        console.log(active);
+    };
+
+
+    const ObjectSpecificantions = {
+        numberStoreroom: 98,
+        price: 2186,
+        typeLock: 'Электромеханический замок',
+        square: '1.0 м²',
+        volume: '1.0 м³',
+        size: '0.93 х 1.07 х 1.0 м',
+        maxLoad: '350 кг/м²',
+        location: 'Обычный',
+    };
 
     return (
         <>
@@ -46,10 +90,24 @@ const Rent = () => {
                             а также хронятся история платежей и документы аренды.
                         </p>
                     </div>
-                    <div className={style.info_box__box_card_product}></div>
+                    <CardStoreroom
+                        ObjectSpecificantions={ObjectSpecificantions}
+                    />
                     <div className={style.info_box__authorization}>
-                        <ButtonsAuthorization/>
-                        <FormRegistration ArraySizes={ArraySizes}/>
+                        <ButtonsAuthorization state={false} callback={returnStateActive}/>
+                        {Choice ? (
+                            <>
+                                <FormRegistration
+                                    ArraySizes={ArraySizesRegistration}
+                                    StylesCheckbox={StylesCheckbox}
+                                    StylesAdaptiveCheckbox={StylesAdaptiveCheckbox}
+                                />
+                            </>
+                        ) : (
+                            <>
+                                <FormLogin ArraySizes={ArraySizesLogin} />
+                            </>
+                        )}
                     </div>
                 </div>
             </section>
